@@ -125,7 +125,7 @@ public final class TimeSteward {
 	 * @param local True for local time, false for UTC.
 	 */
 	static public String currentDateTimeString(boolean local) {
-		SimpleDateFormat sdf = createDateFormat("yyyy-MM-dd HH:mm:ss",
+		SimpleDateFormat sdf = createDateFormat("yyyy-MM-dd HH:mm:ss.SSS",
 			local);
 		return sdf.format(new Date(currentTimeMillis()));
 	}
