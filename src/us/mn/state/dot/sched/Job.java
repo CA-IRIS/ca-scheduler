@@ -45,10 +45,10 @@ abstract public class Job implements Comparable<Job> {
 
 	/** Time interval to perform this job, in milliseconds.  For
 	 * non-repeating jobs, this must be 0. */
-	private final long interval;
+	protected final long interval;
 
 	/** Time offset from whole interval boundary, in milliseconds. */
-	private final long offset;
+	protected final long offset;
 
 	/** Next time this job must be performed */
 	private long next_time;

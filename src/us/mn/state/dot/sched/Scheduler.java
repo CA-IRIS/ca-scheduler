@@ -15,6 +15,7 @@
 package us.mn.state.dot.sched;
 
 import java.util.Date;
+import java.util.Iterator;
 import java.util.TreeSet;
 
 /**
@@ -187,5 +188,10 @@ public final class Scheduler {
 	public void dispose() {
 		disposing = true;
 		thread.interrupt();
+	}
+
+	/** retrieve iterator for jobs on the todo list */
+	public synchronized Iterator<Job> getJobIterator() {
+		return todo.iterator();
 	}
 }
